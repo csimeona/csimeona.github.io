@@ -1,0 +1,586 @@
+/* header styling */
+.header {
+	width: 100%;
+	min-height: 110px;
+	text-align: center;
+
+	background: url('images/myheader.png') no-repeat 50% 0; 
+	-webkit-background-size: 1600px 100%;
+	-moz-background-size: 1600px 100%;
+	-o-background-size: 1600px 100%;
+	background-size: 1600px 100%;
+
+	position: relative;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logoDiv {
+	left: 15px;
+	top: 15px;
+	position: absolute;
+	white-space: nowrap;
+}
+
+.logoLink {
+	display: inline-block;
+	font-size: 3.0769em; 
+	font-weight: 300;
+	text-align: center;
+	color: #bac3f7;
+	text-decoration: none;
+}
+
+.logoLink:hover {
+	text-decoration: none;
+}
+
+/*------ End Header style ------*/
+
+
+/*------ Menu/Nav style ------*/
+nav {
+	background: rgba(255,255,255,0.8);
+	float: right;
+	top: 60px;
+	right: 40px;
+	padding: 0px;
+	-webkit-border-radius: 5px 5px;
+	-moz-border-radius: 5px / 5px;
+	border-radius: 5px / 5px;
+	-webkit-box-shadow: rgba(0,0,0,0.1) 0px 1px 2px;
+	-moz-box-shadow: rgba(0,0,0,0.1) 0px 1px 2px;
+	box-shadow: rgba(0,0,0,0.1) 0px 1px 2px;
+	position: relative;
+}
+
+.showButton {
+	display:none;
+} 
+
+.menuUL {
+	padding: 0;
+	margin: 0px;
+	display: inline-block;
+	line-height: 2;
+	font-size: 12px;
+}
+
+.menuUL > li {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.menuUL li a {
+	text-align:center;
+	color:#7c8e9f;
+	text-decoration:none;
+	margin: 0 10px;
+	font-family: arial,sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.menuUL li:hover > a,
+.menuUL li:hover > span,
+.menuUL li > a:hover,
+.menuUL li > span:hover,
+.menuUL li > .selectedItem,
+.menuUL li > .selectedItem
+{
+	color:#4d5865; /* nav hovered color */
+}
+
+.menuUL li ul li:hover ul{
+	display: block;
+	position: absolute;
+	left: 100%;
+	top: 0;
+	z-index: 10;
+	padding-left: 5px;
+	border-left: 5px solid transparent;
+}
+
+
+/*------ End Menu/Nav style ------*/
+
+
+/*------ Content style ------*/
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	height: 100%;
+ 
+}
+
+
+body {
+	line-height: 1.5;
+	background-color: #fff;
+
+	margin: 0;
+	padding: 0;
+
+	height: 100%;
+	//height: calc(100% - 100px);
+}
+
+ ::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+
+
+/* img {
+ vertical-align: middle;
+} */
+
+
+
+ a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+ 
+}  
+
+ #email a, p a{
+	color:#4fabcd;
+	font-weight: bold;
+} 
+
+/* p a{
+	color:#4fabcd;
+	font-weight: bold;
+}
+ */
+a:hover {
+	text-decoration: none;
+}
+
+
+.middle > section,
+.middle > aside,
+.middle > div {
+	white-space: normal;
+} 
+
+.content {
+	width: 100%;
+	
+	display: inline-block;
+	vertical-align: top;
+	padding: 50px 0 0;
+}
+
+/*------ End Content style ------*/
+
+
+#welcome { 
+	font-family: "Open Sans";
+	font-size: 28px;
+	line-height: .9em;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: 300;
+	font-style: normal;
+	text-align:center;
+}
+
+h2 {
+	font-family: Varela Round,arial,sans-serif;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: normal;
+	font-style: normal;
+	text-align:center;
+}
+
+p {
+	font-family: "Open Sans";
+	font-size: 18px;
+	line-height: 1.4em;
+	text-transform: none;
+	text-decoration: none;
+	font-weight: 300;
+	font-style: normal;
+	margin: 0 0 1.4em;
+}
+
+
+.middle {
+	margin: 0 auto;
+	padding: 45px 8%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	white-space: nowrap;
+	padding-top:0px;
+
+	min-height: calc(100% - 139px);
+	
+	margin: 0 auto;
+}
+
+
+
+
+/* ==========================================================================
+Media Queries / Responsive Styling
+========================================================================== */
+
+@media screen and (min-width: 1599px) {
+	.header {
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		background-size: 100% 100%;
+	}
+}
+
+/* @media only screen and (max-width: 960px) { 
+ .navbar-share {display: none;}
+} */
+
+/* @media screen and (max-width: 800px) { 
+
+} */
+
+@media screen and (max-width: 600px) {
+	.logoDiv {
+
+	}
+
+	.vert-menu .uMenuRoot {
+
+	}
+
+	.logo-brk {
+	display: none;
+	}
+
+	.logoLink {
+		display: block;
+	}
+
+
+
+	.menuUL {
+	max-width: 550px;
+	}
+
+	/*.middle {
+	padding: 45px 10px;
+	white-space: normal;
+	min-height: 100%;
+
+	//margin: 0 auto -30px;
+	}*/
+
+	.content {
+	padding: 25px;
+
+	}
+
+
+
+	.copy {
+	float: none;
+	text-align: center;
+	}
+ 
+ 
+}
+
+
+ 
+
+@media screen and (max-width: 681px) {
+	.header {
+	min-height: 110px !important;
+
+	}
+
+	.showButton {
+	display:block;
+	}
+
+
+	.vert-menu {
+	display: none;
+	}
+
+	/*------ mobile menu style ------*/
+	.show-menu {
+	display: block;
+	border: none;
+	overflow: hidden;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+	width:100px;
+
+	color: #7c8e9f;
+	font-family: arial,sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	}
+
+	.show-menu:hover {
+	cursor: pointer;
+	}
+
+	.menuUL {
+	margin: 0;
+	padding: 0;
+	display: block;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	}
+
+	.menuUL > li {
+	padding: 0;
+	margin: 0;
+	vertical-align: center;
+	}
+
+	.menuUL li {
+	display: block;
+	width: 100%;
+	}
+
+	.menuUL > li:first-child {
+	border-top: none;
+	}
+
+	.menuUL li a {
+	display:block;//height: 50px;
+	width: 100%;
+	vertical-align: center;
+	text-align:center;
+	text-decoration:none;
+	padding: 0;
+	margin: 0; 
+	}
+
+	.menuUL li a:hover {
+	color: #000;
+
+	}
+
+
+	.menuUL li ul {
+	margin: 0;
+	padding: 0;
+	list-style: disc;
+	display: block;
+	position: static !important;
+	}
+
+	.menuUL li li a{
+	border-top: none;
+	padding: 0 0 0 30px;
+	}
+
+	.menuUL li li li a{
+	padding-left: 60px;
+	}
+
+	.menuUL li ul li:hover ul{
+	border-left: none;
+	padding-left: 0;
+	}
+
+	.vert-menu li.uWithSubmenu:hover > a,
+	.vert-menu li.uWithSubmenu:hover > span {
+	background-color: #ccc !important;
+	}
+
+
+	/*------ mobile menu style ------*/
+}
+
+
+
+@media screen and (min-width: 681px) {
+	.vert-menu {
+		display: inline-block !important;
+	}
+}
+
+
+
+
+/*------ Start Footer style ------*/
+
+/*.footer {
+ background: #33CCFF none repeat scroll 0 0;
+ overflow: hidden;
+ //position:absolute;
+ 
+ //height: 30px;
+ left:0px;
+ right:0px;
+ //bottom:0px;
+ padding:10px 5px;
+ margin: 0;
+ margin-top:0px;
+ 
+ 
+ border-top: 1px solid #ededed;
+ padding: 5px 20px;
+ color:white;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 12px;
+} */
+
+.footer {
+ 	margin: 0 auto;
+	border-top: 1px solid #ededed;
+	background: #00A9C5  none repeat scroll 0 0; 
+	color:#F9F3DB;
+
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+
+	position:absolute;
+	left:0px;
+	right:0px;
+
+	padding-right:10px;
+	padding-left:10px;
+}
+
+
+.copy {
+ 
+}
+
+
+
+ .push {
+	content:"";
+	display:block;
+}
+
+.footer, .push {
+ 
+}
+
+.footer div {
+	padding:5px;
+	text-align:center;
+}
+/*------ End Footer style ------*/
+
+
+
+
+#projectInfo {
+	float: left; 
+}
+
+/* #projectInfo2 {
+float: right; width: 45%;
+} */
+
+.fa-info-circle {
+	font-size:13px;
+}
+
+
+
+#menuButton {
+	display:none;
+}
+
+input[type=checkbox]:checked~.vert-menu {
+	display:inline-block;
+}
+
+#email {
+	text-align:center;
+} 
+
+
+.project-image > img {
+    width: 100%;
+}
+
+.wrapper {
+	width: 28%;
+	display: inline-block;
+	float: left;
+	margin:0 8% 1em 0;
+}
+
+.project-title {
+	text-align:center;
+	font-weight: 600;
+	margin-top:5px;
+}
+
+.wrapper:nth-child(3n) {
+	margin-right: 0;
+	
+}
+
+a.project {
+	color:black;
+}
+
+/*  Portfolio Animation */
+@keyframes grow {
+    0%   {
+		transform: scale(0);
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-ms-transform: scale(0);
+		}
+    25%  {
+		transform: scale(0.25);
+		-webkit-transform: scale(0.25);
+		-moz-transform: scale(0.25);
+		-ms-transform: scale(0.25);
+		}
+    50%  {
+		transform: scale(0.5);
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		}
+    100% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		}
+}
+
+/* The element to apply the animation to */
+.wrapper{
+    animation: grow 0.5s linear 0s;
+	-webkit-animation: grow 0.5s linear 0s;
+	-moz-animation: grow 0.5s linear 0s;
+	-ms-animation: grow 0.5s linear 0s;
+}
+
+hr {
+	color: lightgray;
+}
+
+#titleHR {
+	margin-bottom: 27px;
+}
