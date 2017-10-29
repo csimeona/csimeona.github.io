@@ -1,0 +1,420 @@
+/* This is a css file, which styles html objects. A good source of reference and examples can be found at http://www.w3schools.com/css/default.asp */
+
+/*  Was unable to make slider dynamically resize, and sticks 'out' of the map when smaller than 680 pixels, thus the min-width.
+	Below that, the code sets a max width of 90%, and centers the body within this 90% (5% margins each side). Your webpage may already have this type of setting (margins for the <body>, and thus may be unneeded.
+ */
+/* body {
+	background:black;
+	min-width: 680px;
+	
+	max-width: 90%; 
+	margin-left: auto;
+	margin-right: auto;
+	
+} */
+
+/* The container that holds the map NEEDS a height it to show up */
+#mapContainer { 
+	width:100%;
+	height:600px;
+ }
+/* end styling of 'mock' html */
+
+
+
+
+
+/* start styling of things INSIDE the webmap (continues to the bottom of this document) */
+
+
+/* 
+*EDITABLE*: COLOR GRADIENT FOR POPUP HEADING COLORS (THE AREA OF THE MASSACRE'S NAME). COLORS ON THE LEFT ARE THE START OF GRADIENT, AND ON THE RIGHT ARE ENDING GRADIENT COLOR. GRADIENTS NEED TO BE SET FOR EACH WEB BROWSER FOR COMPATABILITY.  
+YOU COULD ALSO CHANGE THE MASSACRE HEADING FONT IF YOU WISH. OTHER FONT STYLE AND COLOR SETTINGS (I.E. LEGEND TITLES, OTHER HEADINGS, THE ATTRIBUTES UNDER THESE HEADINGS, OR THE DEPARTMENT LABELS) CAN BE SET IN THEIR RESPECTIVE AREAS BELOW. 
+*/
+	.popupHead {
+		background: -ms-linear-gradient(top, #ffbf0d, #f93);
+		background: -o-linear-gradient(right, #ffbf0d, #f93);
+		background: -webkit-linear-gradient(top, #ffbf0d, #f93);
+		background: -moz-linear-gradient(right, #ffbf0d, #f93);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FFBF0D',endColorStr='#FF9933',GradientType=0)";
+		font: bold 21px/23px "Helvetica Neue","Helvetica",Arial;
+		text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+	}
+
+
+/* IMPORTANT: set dateSlider width or it wont show.
+Remaining Issue: slider doesnt resize; but without setting this to a value the slider wont show. */
+.leaflet-bottom.leaflet-left {
+    //width: 60%;
+	right:250px;
+	left:0px;
+}
+.range-slider {
+		width:100%;
+		top: 32px;
+		left:35px;
+	}
+	
+	.ui-rangeSlider-arrow  {
+		border-radius:3px;
+	}
+	
+	.ui-rangeSlider-arrow-inner  {
+		border-width: 7px 10px 7px 8px; 
+		margin-top: -7px;
+	}
+
+	// vertically center date ruler 
+	.ui-ruler-scale ui-ruler-scale0{
+		top:-2px; 
+	}
+	
+	.ui-rangeSlider-label {
+		padding: 0px 5px;
+		border-radius: 3px;
+		// bottom: 10px; 
+	}
+	
+	.ui-rangeSlider-label {
+		font-size: 12px;
+	}
+	
+	.ui-ruler-tick {
+		margin-top: -2px;
+	}
+.leaflet-container.leaflet-fade-anim div.leaflet-control-container div.leaflet-bottom.leaflet-left div.range-slider.ui-rangeSlider.ui-rangeSlider-withArrows.ui-dateRangeSlider.leaflet-control {
+  position: relative;
+} 
+
+.ui-ruler-tick-label {
+		font-size: 12px;
+	}
+	
+@media screen and (min-width: 1220px) {
+	.ui-ruler-tick-label {
+		left:5px;
+	}
+}
+
+@media screen and (max-width: 1170px) {
+	.ui-ruler-tick-label {
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.ui-ruler-tick-label {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 1070px) {
+	.ui-ruler-tick-label {
+		left:0px;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.ui-ruler-tick-label {
+		font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 935px) {
+	.ui-ruler-tick-label {
+		font-size: 8px;
+	}
+}
+
+
+
+/* style code for the popup content */
+	.popupWindow{
+		width: auto;
+		height: auto;
+	}
+
+	.popupHead {
+		border-top-left-radius: 5px;
+	}
+
+	.popupInfo {
+		padding-left: 10px;
+		padding-bottom:1px;
+	}
+
+	.popupInfo h4{
+		color: #cccccc;
+		font-size: 11px;
+		margin-bottom: 0px;
+	}
+	.popupInfo p {
+		font: 13px "Helvetica",Arial;
+		padding-right: 5px;
+	}
+
+	.popupHead h1, .popupHead h4 {
+		text-align: left;
+		color: white;
+	}
+
+	 .popupHead h1 {
+		padding: 5px;
+	} 
+
+	a.leaflet-popup-close-button {
+		background-color: white;
+		border-radius: 50%;
+
+		margin-top: 0px;
+		opacity: 1;
+		border-left: 0px;
+		border-top:0px
+		border:1px solid grey;
+		position: absolute;
+		top: -3px;
+		left: 173px;
+	}
+
+	 .leaflet-popup-close-button + .leaflet-popup-content-wrapper .leaflet-popup-content {
+		padding-top: 0px;
+	} 
+
+	.leaflet-popup-scrolled {
+		border-bottom: 0px;
+		border-top: 0px;
+		overflow: auto;
+	}
+
+	.leaflet-popup-content-wrapper {
+		border-radius: 5px;
+		padding: 0px;
+		box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+	}
+
+
+	.leaflet-popup-content {
+		padding: 0px 0px 0px;
+	}
+/* end popup styling */
+
+
+/* scrollbar style for webkit (google chrome) browsers. Other browsers require Flash or javascript alternatives and dont display as nicely */ 
+	div ::-webkit-scrollbar {
+		width: 12px;
+	}
+	 
+	div::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+		border-radius: 10px;
+	}
+	 
+	div::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+
+	div::-webkit-scrollbar-thumb:vertical {
+	   
+		border-color: transparent;
+		border-width: 13px 0;
+		min-height: 20px;
+	} 
+/* end popup scrollbar style */
+
+
+/* STYLE  THE LABELS ON THE DEPARTMENTS WHEN IN 'DEPARTMENT MODE' */
+	.textLabel h6 {
+		font-family:  "Book Antiqua" ,Geneva, "Arial Narrow", Arial;
+		font-style: italic;
+		font-size: 12px;
+		height: 0px;
+		margin: 0px;
+		overflow: visible;
+	}
+
+
+/* DEPARTMENT LEGEND STYLING*/
+	/*department legend container styles: text color, background color, shadow, and curved corners set here */
+	.legend {
+		text-align: left;
+		line-height: 18px;
+		color: #555;
+		background: rgba(255,255,255,0.9); 
+		box-shadow: 0 0 15px rgba(0,0,0,0.4);
+		border-radius: 5px;
+		font-weight:600;
+		padding: 10px;
+		padding: 8px 10px 155px;
+		top: 135px;
+		width: 170px;
+	}
+
+	/* styles title of department legend: set its color, size, font, alignment and more here. */
+	.legend h1{
+		margin-bottom: 0;
+		text-align:center; 
+		
+		margin-bottom: -5px; 
+		font-variant: small-caps;
+		letter-spacing: 2px;
+    
+	}
+	
+	/* styles the department color boxes (but the colors themselves are set in the .js) */
+	.legend i {
+		width: 25px;
+		height: 18px;
+		float: left;
+		margin-left: 35px;
+		margin-right: 8px;
+		opacity: 0.9;
+	}
+/* END DEPARTMENT LEGEND STYLES */
+
+
+
+
+/* MASSACRE LEGEND STYLING */
+
+	/* legend window's font, background, shadow, rounded corners, some padding (spacing) for the objects it will hold */
+	.massacreLegend {
+		padding: 6px 10px;
+		font: 14px/16px Arial, Helvetica, sans-serif;
+		background: rgba(255,255,255,0.9);
+		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		border-radius: 5px;
+		padding: 8px 10px 8px 10px;
+		width: 134px;
+		line-height: 10px;
+		padding-bottom: 160px; 
+		width: 170px;
+		top: 135px;
+	}
+
+	/* legend title styles: alignment, font, width, and some space below it */
+	#massacreTitle{
+		text-align: center;
+		font-variant: small-caps;
+		margin-bottom: 8px;
+		letter-spacing: 2px;
+	}
+
+	/* legend's circle container: aligned to the left, given some spacing on the left, and given square dimension that is Greater that the size of its largest circle (48px) */
+	.symbolContainer {
+		float: left;
+		margin-left: 50px;
+		height: 50px;
+		width:50px;
+		margin-bottom: 5px;
+	}
+
+	/* the legend circles are made with divs which are square, here we make them circular (border-radius), give them identical border thickness and opacity as the markers */
+	.legendCircle {
+		border-radius:50%; 
+		border: 1px solid black; 
+		opacity: 0.7;
+		display: inline-block;
+	}
+
+	/* styles the LABELS of legend markers */
+	.legendValue {
+		position: absolute;
+		right: 40px;
+		font-weight:600;
+		margin-top:-3px;
+	}
+	
+	/* styles the massacre legend note about yellow markers */
+	small {
+		font-size:9px;
+		display:block;
+		clear:both;
+	}
+	
+	.massacreLegend hr, .legend hr {
+		margin-bottom: -5px; 
+		color:lightgray;
+		opacity: 0.7;
+	}
+	
+/* END MASSACRE LEGEND STYLING  */
+
+
+/* styles the search box */
+.searchBox {
+	border-radius: 4px;
+	width: 125px;
+}
+
+.leaflet-control-mouseposition {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px #bbb;
+  padding: 0 5px;
+  margin:0;
+  margin-right: 15px;
+  border-radius:4px;
+  color: #FFFFFF;
+  font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.leaflet-control-fullscreen a {
+    border-radius: 3px;
+}
+
+.leaflet-control-minimap {
+	 position: relative; 
+	 margin-right: 40px; 
+	 margin-bottom: 0px; 
+	 top: -10px; 
+	 right:10px; 
+	 border:1px; 
+	 box-shadow: none; 
+	 border-radius:5px;
+}
+
+.fa-play, .fa-pause {
+	margin-top:7px;
+	display:block;
+	font-size:11px;
+	padding-left: 2px;
+}
+
+.fa-pause {
+	padding-left: 0px;
+}
+
+ .leaflet-control-attribution {
+	font-size: 10px;
+    line-height: 11px;
+ }
+ 
+ .leaflet-control-scale.leaflet-control {
+    margin-left: 45px;
+    position: absolute;
+}
+
+html body section.middle.clr div#content.content div#mapContainer.leaflet-container.leaflet-fade-anim div.leaflet-control-container div.leaflet-bottom.leaflet-right div.mapbox-control-info.mapbox-small.leaflet-control {
+	min-height:0px;
+	
+}
+
+.mapbox-info-toggle {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.map-info-container {
+	
+    top: -111px;
+
+    
+    height: 107px;
+    position: absolute;
+    width: 325px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    
+}
+
+em {
+    font-family: sans-serif;
+}
