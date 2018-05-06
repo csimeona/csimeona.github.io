@@ -577,8 +577,13 @@ a.project {
 	-ms-animation: grow 0.5s linear 0s;
 }*/
 
+.wrapper{
+    visibility:hidden;
+}
+
 
 .animate{
+	visibility: visible;
     animation: grow 0.5s linear 0s;
 	-webkit-animation: grow 0.5s linear 0s;
 	-moz-animation: grow 0.5s linear 0s;
