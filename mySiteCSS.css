@@ -575,6 +575,7 @@ a.project {
 	-webkit-animation: grow 0.5s linear 0s;
 	-moz-animation: grow 0.5s linear 0s;
 	-ms-animation: grow 0.5s linear 0s;
+	animation-delay: 2s;
 }
 
 hr {
