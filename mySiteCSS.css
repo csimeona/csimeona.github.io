@@ -569,8 +569,16 @@ a.project {
 		}
 }
 
-/* The element to apply the animation to */
+/* The element to apply the animation to 
 .wrapper{
+    animation: grow 0.5s linear 0s;
+	-webkit-animation: grow 0.5s linear 0s;
+	-moz-animation: grow 0.5s linear 0s;
+	-ms-animation: grow 0.5s linear 0s;
+}*/
+
+
+.animate{
     animation: grow 0.5s linear 0s;
 	-webkit-animation: grow 0.5s linear 0s;
 	-moz-animation: grow 0.5s linear 0s;
