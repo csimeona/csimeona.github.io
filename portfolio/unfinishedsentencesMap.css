@@ -232,6 +232,10 @@ Remaining Issue: slider doesnt resize; but without setting this to a value the s
 		margin: 0px;
 		overflow: visible;
 	}
+/* Animate changes in department colors*/
+	.leaflet-container path{ 
+  		transition: fill .75s;
+	}
 
 
 /* DEPARTMENT LEGEND STYLING*/
