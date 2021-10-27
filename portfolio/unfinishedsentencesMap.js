@@ -350,7 +350,7 @@ function makeBasemapSwitcher (mymap) {
 		detectRetina: true
 	});
 	
-	var mapboxTerrain = L.mapbox.tileLayer('csimeona.4847f7fa')
+	var mapboxTerrain = L.mapbox.tileLayer('mapbox.mapbox-terrain-v2')
     // since layers load asynchronously through AJAX, use the
     // `.on` function to listen for them to be loaded before
     // calling `getTileJSON()`
