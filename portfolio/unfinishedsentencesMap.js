@@ -359,7 +359,7 @@ function makeBasemapSwitcher (mymap) {
         //var TileJSON = layer.getTileJSON();
     });
 	
-	var mapboxSatellite = L.mapbox.tileLayer('mapbox.streets-satellite', {
+	var mapboxSatellite = L.mapbox.tileLayer('mapbox.satellite', {
 		maxNativeZoom: 17
 	});
 	
