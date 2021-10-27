@@ -350,14 +350,16 @@ function makeBasemapSwitcher (mymap) {
 		detectRetina: true
 	});
 	
-	var mapboxTerrain = L.mapbox.tileLayer('mapbox.mapbox-terrain-v2')
+	var mapboxTerrain = L.mapbox.tileLayer('mapbox.mapbox-terrain-v2', {
+		maxNativeZoom: 17
+	});
     // since layers load asynchronously through AJAX, use the
     // `.on` function to listen for them to be loaded before
     // calling `getTileJSON()`
-    .on('ready', function() {
+    //.on('ready', function() {
         // get TileJSON data from the loaded layer
         //var TileJSON = layer.getTileJSON();
-    });
+    //});
 	
 	var mapboxSatellite = L.mapbox.tileLayer('mapbox.satellite', {
 		maxNativeZoom: 17
