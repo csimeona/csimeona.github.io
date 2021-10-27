@@ -52,7 +52,7 @@ if (languageMode == 'english'){
 else {
 	//popup headings in spanish
 	massacreHead = 'MASACRE';
-	victimHead = "V&Iacute;CTIMAS"; //&Iacute; = Õ, (sometimes needed for html strings with special charachtars). — = '&Ntilde;' and ⁄ = '&Uacute'; change letter and case as necessary
+	victimHead = "V&Iacute;CTIMAS"; //&Iacute; = √ç, (sometimes needed for html strings with special charachtars). √ë = '&Ntilde;' and √ö = '&Uacute'; change letter and case as necessary
 	dateHead = 'FETCHA';
 	locationHead = 'LUGAR';
 	adminHead = 'MUNICIPIO, DEPARTAMENTO';
@@ -258,7 +258,7 @@ function play(aniStep) {
 
 //makes map object, grabs base maps, grab national boundary
 function initializeMap(){
-	L.mapbox.accessToken ='pk.eyJ1IjoiY3NpbWVvbmEiLCJhIjoib0Z3SmQtYyJ9.JgHojw4N-XvEZXEA0NZS5g';
+	L.mapbox.accessToken ='pk.eyJ1IjoiY2hzaW1lb25hIiwiYSI6ImNrdHFxY2l4bjB5bm4yd3BxeHd3NWhhbGkifQ.lZOz9Q5nqZPMcL33GOQ_oQ';
 	
 	//lock map to bounds; SW, NE
 	var bounds = L.latLngBounds(L.latLng(12.9, -90.5), L.latLng(15.3, -87));
@@ -312,7 +312,7 @@ function makeSearchBox() {
 		if (languageMode == 'english')
 			placeholderText = 'Search';
 		else
-			placeholderText = 'B˙squeda';
+			placeholderText = 'B√∫squeda';
 			
 		$(input).attr("placeholder", placeholderText);
 		
@@ -746,7 +746,7 @@ function styleMassacres(geojson,mymap) {
 					'<p>' + feature.properties.reportLinkEs + '</p>'; 
 					contentConcat += report2Part;
 				}
-				var report2Part = '<p><a†href="' + feature.properties.reportLink2 + '">Navigate to available research</a></p>';
+				var report2Part = '<p><a¬†href="' + feature.properties.reportLink2 + '">Navigate to available research</a></p>';
 				contentConcat += report2Part;
 			} 
 			*/
@@ -865,7 +865,7 @@ function makeMassacreLegend() {
 			var note = '*<mark>Yellow</mark> indicates available research';
 		}
 		else {
-			var note ='*<mark>Amarillo</mark> indica la investigaciÛn disponible';
+			var note ='*<mark>Amarillo</mark> indica la investigaci√≥n disponible';
 		}
 		
 		var legendNote=L.DomUtil.create('small', 'legendNote'); 
@@ -1135,11 +1135,11 @@ function search() {
 
 //used in search box
 function cleanChars(str) {
-    str = str.replace(/[·„¡√]/g,"a");
-    str = str.replace(/[È…]/g,"e");
-	str = str.replace(/[ÌÕ]/g,"i");
-    str = str.replace(/[Û”]/g,"o");
-	str = str.replace(/[˙⁄]/g,"u");
-    str = str.replace(/[Ò—]/g,"n");
+    str = str.replace(/[√°√£√Å√É]/g,"a");
+    str = str.replace(/[√©√â]/g,"e");
+	str = str.replace(/[√≠√ç]/g,"i");
+    str = str.replace(/[√≥√ì]/g,"o");
+	str = str.replace(/[√∫√ö]/g,"u");
+    str = str.replace(/[√±√ë]/g,"n");
     return str.replace(/[^a-z0-9]/gi,''); // final clean up
 }
