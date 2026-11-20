@@ -333,13 +333,13 @@ function makeSearchBox() {
 
 function makeBasemapSwitcher (mymap) {
 	//put default grey basemap on map object
-		var HEREcarnavDayGrey = L.tileLayer(			'http://arcgisonline.com/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+		var HEREcarnavDayGrey = L.tileLayer(			'http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 			attribution: '&copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
-			subdomains: '1234',
-			mapID: 'newest',
-			app_id: 'NRlH3MhS0Lx00udumvEb',
-			app_code: 'SkNWrCWJ1geBgq6TMrIl0Q',
-			base: 'base',
+			//subdomains: '1234',
+			//mapID: 'newest',
+			//app_id: 'NRlH3MhS0Lx00udumvEb',
+			//app_code: 'SkNWrCWJ1geBgq6TMrIl0Q',
+			//base: 'base',
 			detectRetina: true
 		}).addTo(mymap);  
 	
