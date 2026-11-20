@@ -350,7 +350,7 @@ function makeBasemapSwitcher (mymap) {
 		detectRetina: true
 	});
 	
-	var mapboxTerrain = L.mapbox.tileLayer('mapbox.mapbox-terrain-v2', {
+	var mapboxTerrain = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 		maxNativeZoom: 17
 	});
     // since layers load asynchronously through AJAX, use the
@@ -361,7 +361,7 @@ function makeBasemapSwitcher (mymap) {
         //var TileJSON = layer.getTileJSON();
     //});
 	
-	var mapboxSatellite = L.mapbox.tileLayer('mapbox.satellite', {
+	var mapboxSatellite = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 		maxNativeZoom: 17
 	});
 	
