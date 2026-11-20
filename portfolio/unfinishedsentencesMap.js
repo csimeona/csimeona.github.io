@@ -333,7 +333,7 @@ function makeSearchBox() {
 
 function makeBasemapSwitcher (mymap) {
 	//put default grey basemap on map object
-		var HEREcarnavDayGrey = L.tileLayer(			'http://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/carnav.day.grey/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
+		var HEREcarnavDayGrey = L.tileLayer(			'https://arcgisonline.comCanvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
 			attribution: '&copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
 			subdomains: '1234',
 			mapID: 'newest',
